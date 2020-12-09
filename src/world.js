@@ -1,8 +1,10 @@
+import * as customFunctions from './custom.js'
+
 // Uncomment the following code or use it as a template to start crafting your first world tree
 
 // World Tree
 
-/* let world = {
+let world = {
     name: "World Name Here",
     // rooms are a generic name for a conceptually cohesive space
     rooms: {
@@ -16,7 +18,7 @@
                 // object's objectName should be camelcase of object's name property as shown below
                 firstObject: {
                     // the name property is what the object is called in the game description and is keyword highlighted
-                    name: "first object"
+                    name: "first object",
                     description: `<p class="game-text">First Object Description Here</p>`,
                     openText: `<p class="game-text">Optional Text</p>`,
                     pushText: `<p class="game-text">Optional Text</p>`,
@@ -69,4 +71,7 @@
             // all the same info
         }
     }
-} */
+}
+
+export { world };
+export { customFunctions }

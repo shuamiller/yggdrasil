@@ -1,3 +1,6 @@
+import { world } from './world.js';
+import { customFunctions } from './world.js';
+
 // Create variables from HTML Elements
 const beginBtn = document.querySelector("#begin-button");
 const beginDiv = document.querySelector("#begin-div");
@@ -72,11 +75,11 @@ beginBtn.addEventListener('click', () => {
     playerInput.setAttribute('placeholder', 'What Will You Do?');
     removeChildren(gameInfo);
     gameInfo.appendChild(descriptionDiv);
-    addRoomDescription(worlds0.rooms.entryPoint);
+    addRoomDescription(world.rooms.entryPoint);
     gameInfo.appendChild(actionResponseDiv);
     createLocationHeader();
-    setRoomLocation(worlds0.rooms.entryPoint);
-    setWorldLocation(worlds0);
+    setRoomLocation(world.rooms.entryPoint);
+    setWorldLocation(world);
     
 });
 
@@ -202,7 +205,7 @@ function showRoomDescription(room) {
 // Sets currentRoom and changes Location Header
 function enterRoom(aspect) {
     let newAspect = currentRoom.directions[aspect].room;
-    currentRoom = worlds0.rooms[newAspect];
+    currentRoom = world.rooms[newAspect];
     setRoomLocation(currentRoom);
     showRoomDescription(currentRoom);
     actionResponseDiv.scrollTop = actionResponseDiv.scrollHeight - actionResponseDiv.clientHeight;
