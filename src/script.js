@@ -1,15 +1,11 @@
 import { world } from './world.js';
-import { customFunctions } from './world.js';
 
 // Create variables from HTML Elements
 const beginBtn = document.querySelector("#begin-button");
 const beginDiv = document.querySelector("#begin-div");
-const textDiv = document.querySelector("#text-div");
 const playerInterface = document.querySelector("#player-interface");
-const inputDiv = document.querySelector("#input-div");
 const playerInput = document.querySelector("#player-input");
 const gameInfo = document.querySelector('#game-info');
-const form = document.querySelector('form')
 const locationDiv = document.createElement('div');
 const worldLocation = document.createElement('div');
 const worldText = document.createElement('p');
